@@ -134,12 +134,3 @@ console.log("addId ===", addId);
 // 8.1 persikopijuoti kad orginalas butu su id reiksmem
 
 // 9. sukurti funkcija kuri gaudama id istrina ta masyvo elementa. deletPerson(p_02)
-
-// kazkas
-
-// padarius kelis commitus noriu grazinti i ankstesne versija, pvz buvusia pries 2 commitus
-// dirbau dev branch, sumerginau i main, noriu grazinti main atgal i buvusia versija pries merge
-
-// sarasas zmoniu, kurie committino kazkoki faila.
-// paskutinis zmogus, padares commit faile arba tam visam origin
-//
