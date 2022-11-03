@@ -10,6 +10,7 @@ let people = [
     income: 1200,
     married: false,
     hasCar: false,
+    id: "p_01",
   },
   {
     name: "Severija",
@@ -19,6 +20,7 @@ let people = [
     income: 1300,
     married: false,
     hasCar: true,
+    id: "p_02",
   },
   {
     name: "Valdas",
@@ -28,6 +30,7 @@ let people = [
     income: 0,
     married: false,
     hasCar: false,
+    id: "p_03",
   },
   {
     name: "Virginijus",
@@ -37,6 +40,7 @@ let people = [
     income: 2400,
     married: true,
     hasCar: true,
+    id: "p_04",
   },
   {
     name: "Samanta",
@@ -46,6 +50,7 @@ let people = [
     income: 1200,
     married: true,
     hasCar: true,
+    id: "p_05",
   },
   {
     name: "Janina",
@@ -55,6 +60,77 @@ let people = [
     income: 364,
     married: false,
     hasCar: false,
+    id: "p_06",
+  },
+  {
+    name: "Janina",
+    surname: "Stalautinskienė",
+    sex: "female",
+    age: 72,
+    income: 364,
+    married: false,
+    hasCar: false,
+    id: "p_07",
+  },
+  {
+    name: "Janina",
+    surname: "Stalautinskienė",
+    sex: "female",
+    age: 72,
+    income: 364,
+    married: false,
+    hasCar: false,
+    id: "p_08",
+  },
+  {
+    name: "Janina",
+    surname: "Stalautinskienė",
+    sex: "female",
+    age: 72,
+    income: 364,
+    married: false,
+    hasCar: false,
+    id: "p_09",
+  },
+  {
+    name: "Janina",
+    surname: "Stalautinskienė",
+    sex: "female",
+    age: 72,
+    income: 364,
+    married: false,
+    hasCar: false,
+    id: "p_10",
+  },
+  {
+    name: "Janina",
+    surname: "Stalautinskienė",
+    sex: "female",
+    age: 72,
+    income: 364,
+    married: false,
+    hasCar: false,
+    id: "p_11",
+  },
+  {
+    name: "Janina",
+    surname: "Stalautinskienė",
+    sex: "female",
+    age: 72,
+    income: 364,
+    married: false,
+    hasCar: false,
+    id: "p_12",
+  },
+  {
+    name: "Janina",
+    surname: "Stalautinskienė",
+    sex: "female",
+    age: 72,
+    income: 364,
+    married: false,
+    hasCar: false,
+    id: "p_13",
   },
 ];
 
@@ -127,10 +203,35 @@ console.log("avgBySex ===", avgBySex);
 
 // 8. grazinti nauja masyva pridedant prie kiekvieno objekto id savybe kuri bus didejanti nuo p_01
 const addId = people.map((person, index) => {
-  person[`id`] = `p_${index}`;
+  const localCopy = { ...person };
+  //   if (index < 9) localCopy.id = `p_0${index + 1}`;
+  //   else localCopy.id = `p_${index + 1}`;
+  localCopy.id = `p_` + (index + 1).toString().padStart(2, "0");
+
+  return localCopy;
 });
 console.log("addId ===", addId);
 
 // 8.1 persikopijuoti kad orginalas butu su id reiksmem
 
 // 9. sukurti funkcija kuri gaudama id istrina ta masyvo elementa. deletPerson(p_02)
+// 10. parasyti funkcija kuri sukuria ir grazina viena zmogaus kortele tokiu pavidalu
+// `
+// <article class="card">
+//   <h3>Severija Piktutytė</h3>
+//   <h4>26 metu moteris</h4>
+//   <p>atlyginimas: 1300 eur</p>
+//   <p class=""><i class="fa fa-car" aria-hidden="true"></i></p>
+// </article>
+// `;
+// jei vaiduorja masinos ikona zalia, jei ne raudona
+
+// 11. sukurti funkcija renderList(data) kuri is dataArr sugeneruoja elementus su 10pratimo funkcija ir patalpina juos i `<div id="people-container" class="people-container">`
+
+// 12. su 11to pratimo funkcija rikiuojam ir atrenkam elementus i sarasa mygtuku paspaudimais.
+// `
+//   <button>Rodyti tik vyrus</button>
+//   <button>Rodyti tik moteris</button>
+//   <button>isrikiuoti pagal pajamas</button>
+//   <button>isrikiuoti pagal amziu</button>
+// `;
