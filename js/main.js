@@ -97,3 +97,9 @@ const avg1 =
 console.log("avg1 ===", avg1);
 
 // 8.
+
+const isThereNotNumAndNotStr = nums2.some(
+  (sk) => !(typeof sk === "string" && typeof sk === "number")
+);
+
+console.log("isThereNotNumAndNotStr ===", isThereNotNumAndNotStr);
