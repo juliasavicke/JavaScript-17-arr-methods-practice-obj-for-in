@@ -89,3 +89,11 @@ const avg =
 console.log("avg ===", avg);
 
 // 7.
+
+const numbersNums3 = nums2.filter((sk) => typeof sk === "number");
+const avg1 =
+  numbersNums3.reduce((total, sk) => total + sk) / numbersNums3.length;
+
+console.log("avg1 ===", avg1);
+
+// 8.
