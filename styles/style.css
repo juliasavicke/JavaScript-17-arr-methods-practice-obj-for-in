@@ -1,2 +1,14 @@
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 @import url("reset.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+
+.driver-icon {
+  color: tomato;
+}
+.driver-icon.driver {
+  color: green;
+}
+.people-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
